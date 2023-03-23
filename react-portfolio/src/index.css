@@ -1,3 +1,8 @@
+:root {
+  --dark-background:black;
+  --light-color: rgb(184, 186, 189)
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,5 +16,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.tabs {
+  display: flex;
+  background-color: var(--dark-background);
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 90vh;
+  color: var(--light-color);
+  align-items: center;
+}
+.details {
+  width: 60%;
+  height: 70%;
+}
+
+.nav {
+  font-size: 100%;
+  background-color: black;
+  border-bottom: 1px solid white;
+  z-index: 1;
+}
+
+.nav a {
+  color:white;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  border-top: 1px solid white;
+  background-color: black;
+}
+
+
+
 
 

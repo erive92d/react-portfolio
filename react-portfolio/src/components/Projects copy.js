@@ -6,8 +6,8 @@ export default function Projects () {
 
     return (
         <motion.div  
-        initial={{ y: "100%" }}
-        animate={{ y: "calc(90vh - 100%)" }}
+        initial={{ y: "-100%" }}
+        animate={{ y: "calc(85vh - 100%)" }}
         transition={{ type: "tween", stiffness: 80, duration: 0.5 }}
       
           
