@@ -1,5 +1,6 @@
-export default function About() {
 
+import Header from "./Header"
+export default function About() {
 
     return (
         <div>
