@@ -51,7 +51,9 @@ function Navigation(props) {
 
     <Nav className="nav" fill variant="pills" defaultActiveKey="/home">
       <Nav.Item>
-        <Nav.Link href="#about" onClick={() => props.handlePage('about')}>About</Nav.Link>
+    
+        <Nav.Link href="#about" onClick={() => props.handlePage('about')} >About</Nav.Link>
+        
       </Nav.Item>
       <Nav.Item>
         <Nav.Link href="#projects" onClick={() => props.handlePage('projects')} eventKey="link-1">Projects</Nav.Link>

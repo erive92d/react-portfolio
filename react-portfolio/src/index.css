@@ -1,6 +1,7 @@
 :root {
-  --dark-background:black;
-  --light-color: rgb(184, 186, 189)
+  --semi-dark: #666666;
+  --text:black;
+  --blueis: ##0088CC;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
 }
 
 code {
@@ -23,7 +25,7 @@ code {
   flex-direction: column;
   justify-content: space-evenly;
   height: 90vh;
-  color: var(--light-color);
+  color: var(--text);
   align-items: center;
 }
 .details {
@@ -33,7 +35,7 @@ code {
 
 .nav {
   font-size: 100%;
-  background-color: black;
+  background-color: var(--semi-dark);
   border-bottom: 1px solid white;
   z-index: 1;
 }
@@ -48,8 +50,8 @@ footer {
   justify-content: center;
   align-items: center;
   height: 5vh;
+  color:var(--text);
   border-top: 1px solid white;
-  background-color: black;
 }
 
 
