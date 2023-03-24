@@ -4,6 +4,7 @@ import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import Nav from "react-bootstrap/Nav";
+import Footer from "./Footer";
 
 function Header() {
   const [location, setLocation] = useState("about");
@@ -25,16 +26,23 @@ function Header() {
   const handlePage = (value) => setLocation(value);
 
   return (
-    <div>
+    <div className="main">
       <Navigation handlePage={handlePage} />
       {renderPage()}
+      <Footer />
     </div>
   );
 }
 
 function Navigation(props) {
+  const navStyles = {
+    name: {
+      fontWeight: 700,
+    },
+  };
+
   return (
-    <Nav fill variant="pills" defaultActiveKey="/home">
+    <Nav className="nav" fill variant="pills" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link href="#about" onClick={() => props.handlePage("about")}>
           About
