@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import About from "./About";
 import Projects from "./Projects";
 import Resume from "./Resume";
@@ -27,7 +27,7 @@ function Header() {
 
   return (
     <div className="main">
-      <Navigation handlePage={handlePage} />
+      <Navigation handlePage={handlePage} currentLocation={location} />
       {renderPage()}
       <Footer />
     </div>
@@ -35,16 +35,14 @@ function Header() {
 }
 
 function Navigation(props) {
-  const navStyles = {
-    name: {
-      fontWeight: 700,
-    },
-  };
-
   return (
-    <Nav className="nav" fill variant="pills" defaultActiveKey="/home">
+    <Nav className="mb-3" fill variant="pills" defaultActiveKey="/home">
       <Nav.Item>
-        <Nav.Link href="#about" onClick={() => props.handlePage("about")}>
+        <Nav.Link
+          className={props.currentLocation ? "testing" : null}
+          href="#about"
+          onClick={() => props.handlePage("about")}
+        >
           About
         </Nav.Link>
       </Nav.Item>

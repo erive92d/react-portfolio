@@ -1,13 +1,13 @@
 :root {
   --semi-dark: #666666;
-  --text:black;
-  --blueis: ##0088CC;
+  --text: black;
+  --blueis: ##0088cc;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,33 +15,36 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .tabs {
   display: flex;
-  background-color: var(--dark-background);
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 90vh;
-  color: var(--text);
   align-items: center;
+  gap: 50px;
+  height: 60vh;
+  color: var(--text);
 }
+
+.title {
+  width: 50vw;
+}
+
 .details {
-  width: 60%;
   height: 70%;
+  width: 100vw;
 }
 
 .nav {
   font-size: 100%;
   background-color: var(--semi-dark);
   border-bottom: 1px solid white;
-  z-index: 1;
 }
 
 .nav a {
-  color:white;
+  color: white;
 }
 
 footer {
@@ -49,12 +52,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 5vh;
-  color:var(--text);
-  border-top: 1px solid white;
+  height: 15vh;
+  color: var(--text);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
-
-
-
-
-
