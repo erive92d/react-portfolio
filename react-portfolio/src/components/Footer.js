@@ -1,4 +1,5 @@
-export default function Footer() {
+
+export default function Footercomp() {
   const styles = {
     footer: {},
   };
@@ -7,8 +8,8 @@ export default function Footer() {
     <footer>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="25"
-        height="25"
+        width="30"
+        height="30"
         fill="currentColor"
         class="bi bi-github"
         viewBox="0 0 16 16"

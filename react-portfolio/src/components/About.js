@@ -29,7 +29,7 @@ export default function About() {
       <motion.p
         className="details "
         initial={{ x: "100%" }}
-        animate={{ x: "calc(100vw - 100%)" }}
+        animate={{ x: "calc(90vw - 100%)" }}
         transition={{ type: "tween", duration: 0.5 }}
       >
         {" "}

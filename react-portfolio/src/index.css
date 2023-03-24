@@ -23,8 +23,9 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height:60vh;
   gap: 50px;
-  height: 60vh;
+
   color: var(--text);
 }
 
@@ -34,7 +35,17 @@ code {
 
 .details {
   height: 70%;
-  width: 100vw;
+  width: 90vw;
+}
+.project-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.project-div {
+  max-height: 100%;
 }
 
 .nav {
@@ -48,13 +59,6 @@ code {
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 15vh;
-  color: var(--text);
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+
 }
+

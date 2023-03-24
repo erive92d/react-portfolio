@@ -4,7 +4,7 @@ import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import Nav from "react-bootstrap/Nav";
-import Footer from "./Footer";
+import Footercomp from "./Footer";
 
 function Header() {
   const [location, setLocation] = useState("about");
@@ -29,7 +29,7 @@ function Header() {
     <div className="main">
       <Navigation handlePage={handlePage} currentLocation={location} />
       {renderPage()}
-      <Footer />
+      <Footercomp />
     </div>
   );
 }
