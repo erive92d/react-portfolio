@@ -11,15 +11,14 @@ export default function Projects() {
     window.open(git)
   }
 
-
   return (
     <motion.div className="project-div"
       initial={{ y: "100%" }}
-      animate={{ y: "calc(75vh - 100%)" }}
+      animate={{ y: "calc(65vh - 100%)" }}
       transition={{ type: "tween", stiffness: 80, duration: 0.5 }}
     >
       <h1 className="mb-3">Projects</h1>
-      <Row xs={2} md={4} className="g-3 mb-5">
+      <Row xs={2} md={4} className="g-4 mb-3">
       {projectData.map((proj) => (
         <Col>
           <Card style={{cursor: 'pointer'}} onClick={()=> handleLink(proj.git) }>

@@ -1,27 +1,27 @@
 const projectData = [
     {
         title: "Budgetly",
-        src:'/test.jpeg',
+        src:'/budgetly.jpeg',
         description: "Way of budgeting",
-        git: "https://github.com/karinnesagir/Budgetly"
+        git: "https://github.com/erive92d/Budget-Application"
     },
     {
         title: "Tech-Blog",
-        src:'/test.jpeg',
-        description: "Way of tech",
-        git: "https://github.com/karinnesagir/Budgetly"
+        src:'/techblog.png',
+        description: "Blogs for Techies",
+        git: "https://deo-techblogs.herokuapp.com/login"
     },
     {
-        title: "Tech-Blog",
-        src:'/test.jpeg',
-        description: "Way of test",
-        git: "https://github.com/karinnesagir/Budgetly"
+        title: "Social-NetworkAPI",
+        src:'/social.png',
+        description: "Social Media API",
+        git: "https://github.com/erive92d/Social-NetworkAPI"
     },
      {
-        title: "Tech-Blog",
-        src:'/test.jpeg',
-        description: "Way of asd",
-        git: "https://github.com/karinnesagir/Budgetly"
+        title: "HTML Generator",
+        src:'/htmlgen.png',
+        description: "Team Generator",
+        git: "https://github.com/erive92d/My-Team-HTML-Gen"
     }
 ]
 
