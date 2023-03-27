@@ -23,7 +23,7 @@ export default function About() {
         animate={{ x: "calc(50vw - 100%)" }}
         transition={{ type: "tween", duration: 0.5 }}
       >
-        Hello, I'm Deorren!
+        About me
       </motion.h1>
 
       <motion.p
@@ -32,12 +32,10 @@ export default function About() {
         animate={{ x: "calc(90vw - 100%)" }}
         transition={{ type: "tween", duration: 0.5 }}
       >
-        {" "}
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-        nesciunt necessitatibus quod in numquam aspernatur facilis earum beatae
-        magni eveniet, provident cumque illum esse, velit recusandae doloremque.
-        Est, architecto. Dolore.
-      </motion.p>
+       Hi, I'm Deorren, a Full Stack Web Developer with a passion for building dynamic and user-friendly web applications. I specialize in using the MERN stack (MongoDB, Express, React, Node.js) and have experience with MySQL, PWA and GraphQL for backend development, as well as HTML, CSS, and JavaScript for front-end development.<br/>
+
+When I'm not coding, you can find me hitting the trails on my mountain bike. I love the rush of adrenaline and the sense of adventure that comes with exploring new paths and pushing myself to new heights.
+    </motion.p>
     </div>
   );
 }

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --semi-dark: #666666;
   --text: black;
@@ -59,8 +63,27 @@ code {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; 
+}
+
+form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+input, textarea {
+  width: 60%;
+
+}
+textarea {
+  height: 100%;
 }
 

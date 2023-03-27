@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import projectData from "../projects/projectData";
+import projectData from "../data/projectData";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
