@@ -1,5 +1,6 @@
 
 # React Portfolio
+LINK: https://erive92d.github.io/react-portfolio/#about
 
 ## Description
 
@@ -30,9 +31,8 @@ Package(s) needed in order for this project to run:
 boptstrap react
 
 ## Usage
-To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it.
+![reactport](https://user-images.githubusercontent.com/110507887/228101934-c49ff4e9-92ed-44b4-83d7-9d7bd68ae135.png)
 
-![alt text](assets/images/screenshot.png)
 
 
 
