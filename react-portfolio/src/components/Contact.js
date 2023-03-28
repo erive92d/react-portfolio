@@ -1,32 +1,47 @@
+import Header from "./Header";
 import { motion } from "framer-motion";
 import { useState } from "react";
 export default function Contact() {
-  const [email, setEmail] = useState("");
+  const [getContact, setGetContact] = useState({
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const [subject, setSubject] = useState("");
+  const handleContact = () => {
+    window.open(
+      `mailto:${getContact.email}?subject=${getContact.subject}&body=${getContact.message}%20goes%20here`
+    );
+  };
 
-  const [message, setMessage] = useState("");
-
-  const handleTo = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
-    setEmail(e.target.value);
+    const { name, value } = e.target;
+
+    console.log(name, value);
+
+    if (name === "email") {
+      setGetContact((prev) => ({
+        ...prev,
+        email: value,
+      }));
+    }
+    if (name === "subject") {
+      setGetContact((prev) => ({
+        ...prev,
+        subject: value,
+      }));
+    }
+
+    if (name === "message") {
+      setGetContact((prev) => ({
+        ...prev,
+        message: value,
+      }));
+    }
   };
 
-  const handleSubject = (e) => {
-    e.preventDefault();
-    setSubject(e.target.value);
-  };
-
-  const handleMessage = (e) => {
-    e.preventDefault();
-    setMessage(e.target.value);
-  };
-
-  const sendMessage = () => {
-    const url = `mailto:${email}?subject=${subject}&body=${message}`;
-
-    window.open(url);
-  };
+  console.log(getContact);
 
   return (
     <motion.div
@@ -35,37 +50,38 @@ export default function Contact() {
       animate={{ x: "calc(100vw - 100%)" }}
       transition={{ type: "tween", duration: 0.5 }}
     >
-      <div className="details">
-        <h1>This is Contact</h1>
-        <form id="email-form">
-          <label for="to">To:</label>
-          <input
-            type="email"
-            id="to"
-            name="to"
-            required
-            onChange={(e) => handleTo(e)}
-          />
-          <label for="subject">Subject:</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            required
-            onChange={(e) => handleSubject(e)}
-          />
-          <label for="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            onChange={(e) => handleMessage(e)}
-          ></textarea>
-          <button type="submit" onClick={sendMessage}>
-            Send Email
-          </button>
-        </form>
+      <div className="">
+        <h1>Contact Me!</h1>
       </div>
+
+      <form>
+        <input
+          type="email"
+          id="email"
+          onChange={(e) => handleChange(e)}
+          name="email"
+          required
+          placeholder="example@email.com"
+        ></input>
+        <input
+          type="text"
+          id="subject"
+          onChange={(e) => handleChange(e)}
+          name="subject"
+          placeholder="Subject"
+        ></input>
+        <textarea
+          type="text"
+          id="message"
+          onChange={(e) => handleChange(e)}
+          name="message"
+          required
+          placeholder="enter message..."
+        ></textarea>
+        <button type="submit" value="Submit" onClick={handleContact}>
+          Submit
+        </button>
+      </form>
     </motion.div>
   );
 }

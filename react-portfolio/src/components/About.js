@@ -23,7 +23,7 @@ export default function About() {
         animate={{ x: "calc(50vw - 100%)" }}
         transition={{ type: "tween", duration: 0.5 }}
       >
-        Hello There!
+        About me
       </motion.h1>
 
       <motion.p
@@ -32,25 +32,16 @@ export default function About() {
         animate={{ x: "calc(90vw - 100%)" }}
         transition={{ type: "tween", duration: 0.5 }}
       >
-        {" "}
-        Hi there! My name is Deorren and I'm a passionate coder and basketball
-        fan. I'm currently looking for new opportunities to grow my skills and
-        contribute to exciting projects. I've always been interested in
-        technology and how it can be used to solve real-world problems. This led
-        me to pursue a career in software development and I've been coding for
-        several years now. I'm constantly learning and expanding my knowledge,
-        whether it's through online courses, books, or experimenting with new
-        technologies. When I'm not coding, you can usually find me watching
-        basketball. I'm a huge fan of the game and love following my favorite
-        teams and players. I believe that the same principles of teamwork,
-        strategy, and determination that make basketball great also apply to
-        software development. In terms of my technical skills, I'm proficient in
-        a variety of programming languages and frameworks, including JavaScript,
-        React, Node.js, and MongoDB. I'm comfortable working in both front-end
-        and back-end environments and enjoy tackling challenging problems. I'm
-        excited to bring my skills and passion to a new role and contribute to a
-        dynamic and innovative team. Thank you for considering my application,
-        and I look forward to hearing from you!
+        Hi, I'm Deorren, a Full Stack Web Developer with a passion for building
+        dynamic and user-friendly web applications. I specialize in using the
+        MERN stack (MongoDB, Express, React, Node.js) and have experience with
+        MySQL, PWA and GraphQL for backend development, as well as HTML, CSS,
+        and JavaScript for front-end development.
+        <br />
+        <br />
+        When I'm not coding, you can find me hitting the trails on my mountain
+        bike. I love the rush of adrenaline and the sense of adventure that
+        comes with exploring new paths and pushing myself to new heights.
       </motion.p>
     </div>
   );

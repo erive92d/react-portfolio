@@ -4,7 +4,7 @@ import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import Nav from "react-bootstrap/Nav";
-import Footer from "./Footer";
+import Footercomp from "./Footer";
 
 function Header() {
   const [location, setLocation] = useState("about");
@@ -29,17 +29,17 @@ function Header() {
     <div className="main">
       <Navigation handlePage={handlePage} currentLocation={location} />
       {renderPage()}
-      <Footer />
+      <Footercomp />
     </div>
   );
 }
 
 function Navigation(props) {
+  console.log(props.currentLocation,'s')
   return (
     <Nav className="mb-3" fill variant="pills" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link
-          className={props.currentLocation ? "testing" : null}
           href="#about"
           onClick={() => props.handlePage("about")}
         >
@@ -51,6 +51,7 @@ function Navigation(props) {
           href="#projects"
           onClick={() => props.handlePage("projects")}
           eventKey="link-1"
+
         >
           Projects
         </Nav.Link>
