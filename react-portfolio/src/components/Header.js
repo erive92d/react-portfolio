@@ -35,14 +35,14 @@ function Header() {
 }
 
 function Navigation(props) {
-  console.log(props.currentLocation,'s')
+  console.log(props.currentLocation, "s");
   return (
-    <Nav className="mb-3" fill variant="pills" defaultActiveKey="/home">
+    <Nav activeKey="/home">
       <Nav.Item>
-        <Nav.Link
-          href="#about"
-          onClick={() => props.handlePage("about")}
-        >
+        <Nav.Link href="#">DE</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="#about" onClick={() => props.handlePage("about")}>
           About
         </Nav.Link>
       </Nav.Item>
@@ -51,7 +51,6 @@ function Navigation(props) {
           href="#projects"
           onClick={() => props.handlePage("projects")}
           eventKey="link-1"
-
         >
           Projects
         </Nav.Link>

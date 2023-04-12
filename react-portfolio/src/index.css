@@ -53,6 +53,11 @@ code {
 
 .nav {
   font-size: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  height: 5rem;
   background-color: var(--semi-dark);
   border-bottom: 1px solid white;
 }
