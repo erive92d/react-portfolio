@@ -1,68 +1,42 @@
-import Header from "./Header"
-import { motion } from "framer-motion"
-import { useState } from "react"
+import { useState } from "react";
+import Button from "react-bootstrap/Button"
+import Form from 'react-bootstrap/Form'
+import { motion } from "framer-motion";
 export default function Contact() {
+    const [to, setTo] = useState("erive92d@gmail.com");
+    const [subject, setSubject] = useState("");
+    const [body, setBody] = useState("");
 
-    const [getContact, setGetContact] = useState({
-        email: "",
-        subject: "",
-        message: ""
-    })
-
-    const handleContact = () => {
-        window.open(`mailto:erive92d@gmail.com?subject=${getContact.subject}&body=${getContact.message}%20goes%20here`)
-    }
-
-    const handleChange = (e) => {
-        e.preventDefault()
-        const {name, value} = e.target
-
-        console.log(name, value)
-       
-        if(name === "email") {
-            setGetContact((prev)=>({
-                ...prev, email: value
-            }))
-            
-        } 
-        if (name === "subject"){
-            setGetContact((prev)=>({
-                ...prev, subject: value
-            }))
-        }
-
-        if (name === "message") {
-            setGetContact((prev) => ({
-                ...prev , message: value
-            }))
-        }
-        }
-
-
-    
-        
-        
-    console.log(getContact)
-
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+    };
 
     return (
-        <motion.div className="tabs" 
-        initial={{ x: "-100%" }}
-        animate={{ x: "calc(100vw - 100%)" }}
-        transition={{ type: "tween", duration: 0.5}}>
-            <div className="">
-            <h1>Contact Me!</h1>
-            </div>
+        <div className="contact-form">
+            <motion.h1
+                initial={{ x: "0vw", opacity: 0 }}
+                animate={{ x: "0vw", opacity: 100 }}
+                transition={{ duration: 0.4, delay: 0.5, ease: "easeInOut" }}
+                style={{ lineHeight: "5rem" }}>Let connect!
+            </motion.h1>
+            <motion.Form
+                initial={{ x: "0vw", opacity: 0 }}
+                animate={{ x: "0vw", opacity: 100 }}
+                transition={{ duration: 0.4, delay: 0.9, ease: "easeInOut" }}
+                onSubmit={handleSubmit} style={{ width: "50%" }}>
+                <Form.Group className="mb-1" controlId="subject">
+                    <Form.Label>Subject</Form.Label>
+                    <Form.Control type="text" placeholder="subject" />
+                </Form.Group>
+                <Form.Group className="mb-1" controlId="exampleForm.ControlTextarea1">
+                    <Form.Label>Body</Form.Label>
+                    <Form.Control as="textarea" rows={3} id="body" value={body} onChange={(e) => setBody(e.target.value)} />
+                </Form.Group>
+                <Button type="submit" >Send</Button>
+            </motion.Form>
+        </div>
 
-            <form>
-                
-                <input type="email" id="email" onChange={(e) => handleChange(e)}name="email" required placeholder="example@email.com"></input>
-                <input type="text" id="subject"onChange={(e) => handleChange(e)} name="subject"placeholder="Subject"></input>
-                <textarea type="text" id="message"onChange={(e) => handleChange(e)} name="message"required placeholder="enter message..."></textarea>
-                <button type="submit" value="Submit" onClick={handleContact}>Submit</button>
-                </form>
-            
-        </motion.div>
-    )
+    );
 }
