@@ -35,9 +35,9 @@ function Header() {
 }
 
 function Navigation(props) {
-  console.log(props.currentLocation,'s')
+  console.log(props.currentLocation, 's')
   return (
-    <Nav className="mb-3" fill variant="pills" defaultActiveKey="/home">
+    <Nav className="mb-3" fill variant="pills" defaultActiveKey="/">
       <Nav.Item>
         <Nav.Link
           href="#about"
