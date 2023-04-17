@@ -4,77 +4,64 @@ import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import Nav from "react-bootstrap/Nav";
-import Footercomp from "./Footer";
+import { Navbar } from "react-bootstrap";
+import Landing from "./Landing";
+import Container from "react-bootstrap/Container";
+import Footertag from "./Footer";
 
-function Header() {
-  const [location, setLocation] = useState("about");
+function Navigation() {
+  const [page, setPage] = useState("#home");
 
-  const renderPage = () => {
-    if (location === "about") {
+  const currentPage = (val) => setPage(val);
+
+  const handlePage = () => {
+    if (page === "#home") {
+      return <Landing />;
+    }
+    if (page === "about") {
       return <About />;
     }
-    if (location === "projects") {
+    if (page === "projects") {
       return <Projects />;
     }
-    if (location === "contacts") {
+    if (page === "contact") {
       return <Contact />;
-    } else {
+    }
+    if (page === "resume") {
       return <Resume />;
     }
   };
-
-  const handlePage = (value) => setLocation(value);
-
   return (
-    <div className="main">
-      <Navigation handlePage={handlePage} currentLocation={location} />
-      {renderPage()}
-      <Footercomp />
-    </div>
+    <>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="#about" onClick={() => currentPage("#home")}>
+            <h1>DE</h1>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto"></Nav>
+            <Nav className="links" defaultActiveKey="/">
+              <Nav.Link href="#about" onClick={() => currentPage("about")}>
+                About
+              </Nav.Link>
+              <Nav.Link href="#project" onClick={() => currentPage("projects")}>
+                Projects
+              </Nav.Link>
+              <Nav.Link href="#contact" onClick={() => currentPage("contact")}>
+                Contact
+              </Nav.Link>
+              <Nav.Link href="#resume" onClick={() => currentPage("resume")}>
+                Resume
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      {handlePage()}
+      <Footertag />
+    </>
   );
 }
 
-function Navigation(props) {
-  console.log(props.currentLocation, "s");
-  return (
-    <Nav activeKey="/home">
-      <Nav.Item>
-        <Nav.Link href="#">DE</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href="#about" onClick={() => props.handlePage("about")}>
-          About
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link
-          href="#projects"
-          onClick={() => props.handlePage("projects")}
-          eventKey="link-1"
-        >
-          Projects
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link
-          href="#contacts"
-          onClick={() => props.handlePage("contacts")}
-          eventKey="link-2"
-        >
-          Contacts
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link
-          href="#resume"
-          onClick={() => props.handlePage("resume")}
-          eventKey="link-3"
-        >
-          Resume
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
-  );
-}
-
-export default Header;
+export default Navigation;

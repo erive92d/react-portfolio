@@ -1,59 +1,60 @@
-import { motion } from "framer-motion";
-import projectData from "../data/projectData";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-
+import projectData from "../utils/projects"
+import Card from 'react-bootstrap/Card';
+import { CardGroup } from "react-bootstrap";
+import Button from 'react-bootstrap/Button'
+import { motion } from "framer-motion"
 export default function Projects() {
-  console.log(projectData);
-  const handleLink = (git) => {
-    window.open(git);
-  };
+  console.log(projectData)
 
-  if (!projectData) {
-    return <h1>Loading...</h1>;
+
+  const styles = {
+    h1: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "7rem",
+      fontSize: "3rem"
+    }
   }
 
+
   return (
-    <motion.div
-      className="project-div"
-      initial={{ x: "100%" }}
-      animate={{ x: "calc(100vw - 100%)" }}
-      transition={{ type: "tween", duration: 0.5 }}
-    >
-      <h1 className="mb-3">Projects</h1>
-      <Row xs={2} md={4} className="g-4 mb-3">
-        {projectData.map((proj) => (
-          <Col>
-            <Card
-              style={{ cursor: "pointer" }}
-              onClick={() => handleLink(proj.git)}
-            >
-              <Card.Img variant="top" src={proj.src} />
+
+    <div className="project-details">
+      <motion.h1
+        style={styles.h1}
+        initial={{ x: "2vw", opacity: 0 }}
+        animate={{ x: "0vw", opacity: 100 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+      >
+        Projects
+      </motion.h1>
+      <motion.div
+        initial={{ x: "0vw", opacity: 0 }}
+        animate={{ x: "0vw", opacity: 100 }}
+        transition={{ duration: 0.9, delay: 0.5, ease: "easeInOut" }}
+        className="projects">
+        {projectData.map((project) => {
+
+          return (
+            <Card style={{ width: '20rem', margin: "1rem", textAlign: "center" }}>
+              <Card.Img variant="top" src={project.src} style={{ height: "15rem" }} />
               <Card.Body>
-                <Card.Title>{proj.title}</Card.Title>
-                <Card.Text>{proj.description}</Card.Text>
+                <Card.Title>{project.title}</Card.Title>
+                <Card.Text>
+                  {project.description}
+                </Card.Text>
+                <Card.Link href={project.link} target="__blank" as={Button}>View</Card.Link>
               </Card.Body>
             </Card>
-          </Col>
-        ))}
-      </Row>
-      <div>
-        <a
-          href="https://github.com/erive92d?tab=repositories"
-          className="badge badge-primary"
-          style={{
-            textDecoration: "none",
-            color: "white",
-            background: "#0d6efd",
-            padding: "5px",
-            borderRadius: "10px",
-          }}
-          target="__blank"
-        >
-          View More
-        </a>
-      </div>
-    </motion.div>
+          )
+        })}
+
+      </motion.div>
+
+
+    </div>
   );
+
 }
