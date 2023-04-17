@@ -1,7 +1,9 @@
+import budget from "./images/budgetly.png"
+
 const projectData = [
     {
         title: "Budgetly",
-        src: './budgetly.jpeg',
+        src: budget,
         description: "Full-Stack (HTML, CSS, Javascript, NodeJs, Express, Mysql)",
         git: "https://github.com/erive92d/Budget-Application",
         link: "https://budget-app-nodejs.herokuapp.com/"
