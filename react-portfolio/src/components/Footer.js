@@ -1,16 +1,13 @@
 import { Container, Row, Col } from "react-bootstrap";
-
-
 export default function Footertag() {
-
   return (
-    <footer className="bg-dark text-light" >
+    <footer className="bg-dark text-light">
       <Container>
         <Row>
           <Col md={6} xs={4}>
             <p>&copy; 2023 Portfolio</p>
           </Col>
-          <Col md={6} xs={6} >
+          <Col md={6} xs={6}>
             <div className="d-flex justify-content-end">
               <a
                 href="https://github.com/your-github-username"
@@ -18,7 +15,7 @@ export default function Footertag() {
                 rel="noopener noreferrer"
                 className="text-light mx-3"
               >
-                Github
+                <i class="fa-brands fa-github"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/your-linkedin-username/"
@@ -26,7 +23,7 @@ export default function Footertag() {
                 rel="noopener noreferrer"
                 className="text-light mx-3"
               >
-                LinkedIn
+                <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </Col>
@@ -34,7 +31,4 @@ export default function Footertag() {
       </Container>
     </footer>
   );
-
-
-
 }

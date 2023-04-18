@@ -4,9 +4,12 @@
   "private": true,
   "homepage": "http://erive92d.github.io/react-portfolio",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "babel-plugin-macros": "^3.1.0",
     "bootstrap": "^5.2.3",
     "framer-motion": "^10.8.5",
     "react": "^18.2.0",
