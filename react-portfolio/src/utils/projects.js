@@ -8,7 +8,7 @@ const projectData = [
   },
   {
     title: "Sahara e-Commerce",
-    src: "http://erive92d.github.io/react-portfolio/sahara.png",
+    src: "./sahara.png",
     description:
       "FullStack (HTML, CSS, Javascript, MongoDB, Express, REST, JWT)",
     git: "https://github.com/erive92d/fake-store",
