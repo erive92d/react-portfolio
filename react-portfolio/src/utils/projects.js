@@ -7,18 +7,19 @@ const projectData = [
     link: "https://budget-app-nodejs.herokuapp.com/",
   },
   {
-    title: "Tech-Blog",
-    src: "./techblog.png",
-    description: "Full-Stack (HTML, CSS, Javascript, NodeJs, Express, Mysql)",
-    git: "https://deo-techblogs.herokuapp.com/login",
-    link: "https://deo-techblogs.herokuapp.com/login",
+    title: "Sahara e-Commerce",
+    src: "http://erive92d.github.io/react-portfolio/sahara.png",
+    description:
+      "FullStack (HTML, CSS, Javascript, MongoDB, Express, REST, JWT)",
+    git: "https://github.com/erive92d/fake-store",
+    link: "https://sahara-store.herokuapp.com/",
   },
   {
     title: "Booksearch Engine",
     src: "./book.png",
     description:
       "FullStack (HTML, CSS, Javascript, MongoDB, Express, GraphQL, JWT)",
-    git: "https://github.com/erive92d/Social-NetworkAPI",
+    git: "https://github.com/erive92d/Booksearch",
     link: "https://book-search-online.herokuapp.com/",
   },
   {
